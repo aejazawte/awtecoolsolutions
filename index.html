@@ -5,91 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Al Barda Air Conditioning</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f9fbfd;
-      color: #333;
-    }
-    header {
-      background: #004080;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: left;
-    }
-    th {
-      background: #004080;
-      color: white;
-    }
-    .price {
-      color: #007b00;
-      font-weight: bold;
-    }
-    .book-btn {
-      background: #007b00;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .book-btn:hover {
-      background: #009f00;
-    }
-    footer {
-      background: #004080;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-    /* Floating WhatsApp button */
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9fbfd; color: #333; }
+    header { background: #004080; color: white; padding: 20px; text-align: center; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    section { padding: 20px; max-width: 900px; margin: auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background: #004080; color: white; }
+    .price { color: #007b00; font-weight: bold; }
+    .book-btn { background: #007b00; color: white; border: none; padding: 6px 12px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+    .book-btn:hover { background: #009f00; }
+    footer { background: #004080; color: white; text-align: center; padding: 15px; margin-top: 40px; }
     .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25d366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 5px #999;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
+      background-color: #25d366; color: #fff; border-radius: 50%;
+      text-align: center; font-size: 30px; box-shadow: 2px 2px 5px #999;
+      z-index: 100; display: flex; align-items: center; justify-content: center;
     }
-    .whatsapp-float:hover {
-      background-color: #20b358;
-    }
-    @media (max-width: 600px) {
-      table, th, td {
-        font-size: 14px;
-      }
-    }
+    .whatsapp-float:hover { background-color: #20b358; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; }
+    .gallery img { width: 250px; height: 180px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+    @media (max-width: 600px) { table, th, td { font-size: 13px; } .gallery img { width: 100%; height: auto; } }
   </style>
 </head>
 <body>
@@ -97,27 +33,69 @@
   <header>
     <h1>Al Barda Air Conditioning</h1>
     <nav>
-      <a href="#services">Services</a>
+      <a href="#ac">AC Services</a>
+      <a href="#washing">Washing Machine</a>
+      <a href="#refrigerator">Refrigerator</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="services">
-    <h2>Our Services & Prices</h2>
+  <!-- Image Gallery -->
+  <section id="gallery">
+    <h2>Our Work</h2>
+    <div class="gallery">
+      <img src="images/ac1.jpg" alt="AC Service Work">
+      <img src="images/ac2.jpg" alt="AC Installation">
+      <img src="images/wm1.jpg" alt="Washing Machine Service">
+      <img src="images/wm2.jpg" alt="Washing Machine Service">
+      <img src="images/pcb1.jpg" alt="PCB Repair Service">
+      
+    </div>
+  </section>
+
+  <section id="ac">
+    <h2>AC Services & Prices</h2>
     <table>
       <tr><th>Service</th><th>Price (₹)</th><th>Action</th></tr>
-      <tr><td>AC Servicing (Split/Window)</td><td class="price">₹499</td><td><button class="book-btn" onclick="bookNow('AC Servicing')">Book Now</button></td></tr>
-      <tr><td>Gas Charging</td><td class="price">₹1499</td><td><button class="book-btn" onclick="bookNow('Gas Charging')">Book Now</button></td></tr>
-      <tr><td>AC Installation</td><td class="price">₹899</td><td><button class="book-btn" onclick="bookNow('AC Installation')">Book Now</button></td></tr>
-      <tr><td>AC Uninstallation</td><td class="price">₹499</td><td><button class="book-btn" onclick="bookNow('AC Uninstallation')">Book Now</button></td></tr>
-      <tr><td>Compressor Replacement</td><td class="price">₹2499</td><td><button class="book-btn" onclick="bookNow('Compressor Replacement')">Book Now</button></td></tr>
+      <tr><td>AC Servicing</td><td class="price">₹1000</td><td><button class="book-btn" onclick="bookNow('AC Servicing')">Book Now</button></td></tr>
+      <tr><td>Gas Charging (Full)</td><td class="price">₹3500 - ₹4000</td><td><button class="book-btn" onclick="bookNow('Gas Charging')">Book Now</button></td></tr>
+      <tr><td>AC Installation</td><td class="price">₹1700</td><td><button class="book-btn" onclick="bookNow('AC Installation')">Book Now</button></td></tr>
+      <tr><td>AC Uninstallation</td><td class="price">₹800</td><td><button class="book-btn" onclick="bookNow('AC Uninstallation')">Book Now</button></td></tr>
+      <tr><td>Copper Piping (1/4 & 1/2 with Superlon Cable, per meter)</td><td class="price">₹1100</td><td><button class="book-btn" onclick="bookNow('Copper Piping')">Book Now</button></td></tr>
+      <tr><td>Window AC Uninstallation</td><td class="price">₹750</td><td><button class="book-btn" onclick="bookNow('Window AC Uninstallation')">Book Now</button></td></tr>
+      <tr><td>Window AC Installation</td><td class="price">₹1250</td><td><button class="book-btn" onclick="bookNow('Window AC Installation')">Book Now</button></td></tr>
+      <tr><td>Noise / Power Issue</td><td class="price">₹699</td><td><button class="book-btn" onclick="bookNow('Noise/Power Issue')">Book Now</button></td></tr>
+      <tr><td>Water Leak Problem</td><td class="price">₹600</td><td><button class="book-btn" onclick="bookNow('Water Leak Problem')">Book Now</button></td></tr>
+      <tr><td>Checking / Visiting Charges</td><td class="price">₹299</td><td><button class="book-btn" onclick="bookNow('Visiting Charges')">Book Now</button></td></tr>
+    </table>
+  </section>
+
+  <section id="washing">
+    <h2>Washing Machine Services</h2>
+    <table>
+      <tr><th>Service</th><th>Price (₹)</th><th>Action</th></tr>
+      <tr><td>Semi Automatic Washing Motor / Spin Motor</td><td class="price">₹3000</td><td><button class="book-btn" onclick="bookNow('Semi Automatic Washing Motor')">Book Now</button></td></tr>
+      <tr><td>Top Load / Front Load Servicing</td><td class="price">₹700</td><td><button class="book-btn" onclick="bookNow('Washing Machine Servicing')">Book Now</button></td></tr>
+      <tr><td>Semi Automatic Timer</td><td class="price">₹155</td><td><button class="book-btn" onclick="bookNow('Semi Automatic Timer')">Book Now</button></td></tr>
+      <tr><td>Capacitor Replacement</td><td class="price">₹1300</td><td><button class="book-btn" onclick="bookNow('Capacitor Replacement')">Book Now</button></td></tr>
+    </table>
+  </section>
+
+  <section id="refrigerator">
+    <h2>Refrigerator Services</h2>
+    <table>
+      <tr><th>Service</th><th>Price (₹)</th><th>Action</th></tr>
+      <tr><td>Timer / Bimetal / Thermal Fuse</td><td class="price">₹2650</td><td><button class="book-btn" onclick="bookNow('Timer / Bimetal / Thermal Fuse')">Book Now</button></td></tr>
+      <tr><td>Relay / OLP</td><td class="price">₹1100</td><td><button class="book-btn" onclick="bookNow('Relay / OLP')">Book Now</button></td></tr>
+      <tr><td>Gas Charging</td><td class="price">₹3200</td><td><button class="book-btn" onclick="bookNow('Refrigerator Gas Charging')">Book Now</button></td></tr>
+      <tr><td>Fan Motor</td><td class="price">₹2000</td><td><button class="book-btn" onclick="bookNow('Fan Motor')">Book Now</button></td></tr>
     </table>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> +91 98765 43210</p>
-    <p><strong>WhatsApp:</strong> +91 98765 43210</p>
+    <p><strong>Phone:</strong> +91 8180984022</p>
+    <p><strong>WhatsApp:</strong> +91 8180984022</p>
     <p><strong>Email:</strong> info@al-barda.com</p>
     <p><strong>Address:</strong> Mumbai, Maharashtra</p>
   </section>
@@ -127,13 +105,11 @@
   </footer>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/+91-8180984022" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
-    ���
-  </a>
+  <a href="https://wa.me/8180984022" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">���</a>
 
   <script>
     function bookNow(serviceName) {
-      const phone = "+91-8180984022"; // Change this to your WhatsApp number
+      const phone = "8180984022"; // replace with your WhatsApp number
       const message = encodeURIComponent(`Hello, I would like to book your service for: ${serviceName}`);
       window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
     }
